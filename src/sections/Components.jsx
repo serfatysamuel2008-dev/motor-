@@ -2,6 +2,7 @@ import { useStore } from '../store'
 import { SHEETS, SHEET_BY_ID } from '../data/sheets'
 import { SPECS, STATUS, SOURCE, IDENTIFICATION } from '../data/specs'
 import Diagram from '../ui/Diagrams'
+import bikeImg from '../assets/bike.png'
 
 function SpecRow({ id }) {
   const s = SPECS[id]
@@ -31,7 +32,7 @@ export default function Components() {
 
       <div className="components__grid">
         <div className="figure">
-          <img src="/img/bike.png" alt="Photographie de référence : moto Harley-Davidson noire, caches moteur cuivrés, silencieux superposés." />
+          <img src={bikeImg} alt="Photographie de référence : moto Harley-Davidson noire, caches moteur cuivrés, silencieux superposés." />
           {SHEETS.map((s, i) => (
             <button
               key={s.id}

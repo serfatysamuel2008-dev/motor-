@@ -3,6 +3,9 @@ import { gsap } from 'gsap'
 import { prefersReducedMotion } from '../store'
 import { globalEngine } from '../three/engineSim'
 import { scrollToId } from '../ui/Nav'
+import bikeImg from '../assets/bike.png'
+import bikeLines from '../assets/bike-lines.png'
+import bikeBlur from '../assets/bike-blur.png'
 
 const TITLE = [['THE', 'ANATOMY'], ['OF A', 'LEGEND']]
 
@@ -103,10 +106,10 @@ export default function Hero() {
         <div className="hero__tilt">
           <div className="hero__cam">
             <div className="hero__bike">
-              <img className="hero__lines" src="/img/bike-lines.png" alt="" />
+              <img className="hero__lines" src={bikeLines} alt="" />
               <div className="hero__shadow" />
-              <img className="hero__blur" src="/img/bike-blur.png" alt="" />
-              <img className="hero__photo" src="/img/bike.png" alt="" />
+              <img className="hero__blur" src={bikeBlur} alt="" />
+              <img className="hero__photo" src={bikeImg} alt="" />
               <div className="hero__engine-glow" />
               <TechOverlay />
             </div>
